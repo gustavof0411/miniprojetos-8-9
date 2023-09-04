@@ -57,7 +57,10 @@
           <Button fx:id="botaoClique" layoutX="772.0" layoutY="14.0" mnemonicParsing="false" onAction="#acaoCarregar" text="Carregar" />
             <VBox fx:id="vboxImagemCapituloImagem" layoutX="440.0" layoutY="57.0" prefHeight="403.0" prefWidth="394.0">
                <children>
-                  <Label fx:id="imagemCapituloImagem" alignment="TOP_LEFT" prefHeight="432.0" prefWidth="444.0" wrapText="true" />
+                  <Label fx:id="imagemCapituloImagem" alignment="TOP_LEFT" prefHeight="432.0" prefWidth="444.0" wrapText="true">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
                </children>
             </VBox>
             <VBox fx:id="vboxTextoConsequencia" layoutX="434.0" layoutY="460.0" prefHeight="148.0" prefWidth="409.0">

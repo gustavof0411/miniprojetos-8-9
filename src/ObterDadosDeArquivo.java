@@ -126,9 +126,9 @@ public class ObterDadosDeArquivo {
         }
     }
 
-    public void carregarProgresso() {
+    public static void carregarProgresso() {
         try {
-            File arquivoSalvo = new File("rsc/saves/save.txt");
+            File arquivoSalvo = new File("rsc/saves/capituloSave.txt");
             FileInputStream fis = new FileInputStream(arquivoSalvo);
             ObjectInputStream ois = new ObjectInputStream(fis);
             ois.readObject();

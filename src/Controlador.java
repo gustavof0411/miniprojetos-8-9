@@ -44,11 +44,17 @@ public class Controlador {
         Scanner continuar = new Scanner(System.in);
         HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
         HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
-        Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
-        mostrarCapitulo(raiz);
+        if (ObterDadosDeArquivo.verificaSave()) {
+            Capitulo capituloSave = ObterDadosDeArquivo.desserializadorDeCapitulo("rsc/saves/capituloSave.txt");
+            mostrarCapitulo(capitulos.get(capituloSave.getNome()));
+        } else {
+            Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
+            mostrarCapitulo(raiz);
+        }
     }
 
     private void mostrarCapitulo(Capitulo capitulo) {
+        ObterDadosDeArquivo.serializadorDeCapitulo(capitulo);
         textoCapitulo.clear();
         textoConsequencia.clear();
         imagemCapituloImagem.setText("");
@@ -93,6 +99,9 @@ public class Controlador {
                     botaoProsseguirCriado = true;
                 }
             }
+        }
+        if (capitulo.getArrayEscolhas().get(0).getProximo() == null) {
+            ObterDadosDeArquivo.deletarProgresso();
         }
     }
 

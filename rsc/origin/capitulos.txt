@@ -55,7 +55,7 @@ CONTINUAÇÃO - CAPÍTULO 1.2
 NOME
 CONTINUAÇÃO - CAPÍTULO 1.2
 TEXTO
-Você decide servir o Mago do Mal. Com o tempo, você se torna corrompido e deseja matar e conquistar cada território, tornando-se um forte aliado.
+Você decide servir o Mago do Mal. Com o passar do tempo, sua mente se torna corrompida e o desejo de matar e conquistar territórios aumenta, tornando-se um forte aliado com o Mago do Mal.
 PERSONAGEM
 Caleb
 VIDA
@@ -188,7 +188,7 @@ Servir
 CAPÍTULO PRÓXIMO OPÇÃO 1
 CONTINUAÇÃO - CAPÍTULO 1.2
 OPÇÃO 2
-Lutar
+Combater
 CAPÍTULO PRÓXIMO OPÇÃO 2
 CONTINUAÇÃO - CAPÍTULO 1.3
 
