@@ -1,0 +1,13 @@
+# arquivos ignorados de Java
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# arquivos ignorados do VSCode
+.vscode/
+.code-workspace

@@ -1,0 +1,277 @@
+CAPÍTULO COM IMAGEM
+ID CAPÍTULO
+[CAPÍTULO 1 - O INÍCIO]
+NOME
+[CAPÍTULO 1 - O INÍCIO]
+TEXTO
+Você é o guerreiro Caleb. Em um certo dia, você é conjurado pelo Rei Salaham para recuperar o Anel do Poder roubado por seu rival, o Mago do Mal. Se não aceitar, pode pôr a vida do Rei em perigo. Aceitar a proposta? ACEITAR - DIGITE S; RECUSAR - DIGITE N
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+null
+null
+FINAL DO CAPÍTULO
+null
+IMAGEM                                                                                
+   |\                     /)
+ /\_\\__               (_//
+|   `>\-`     _._       //`)
+ \ /` \\  _.-`:::`-._  //
+  `    \|`    :::    `|/
+        |     :::     |
+        |.....:::.....|
+        |:::::::::::::|
+        |     :::     |
+        \     :::     /
+         \    :::    /
+          `-. ::: .-'
+           //`:::`\\
+          //   '   \\
+         |/         \\                                       
+FIM DA IMAGEM
+
+CAPÍTULO
+ID CAPÍTULO
+[CONTINUAÇÃO - CAPÍTULO 1.1]
+NOME
+[CONTINUAÇÃO - CAPÍTULO 1.1]
+TEXTO
+Ao recusar, o Mago do Mal permanece vivo e executa o Rei com todo o poder do Anel. No dia seguinte, o Mago do Mal vem até você e o oferece uma proposta de servir a ele. Se não servir, terá que combatê-lo. COMBATER - DIGITE "LUTAR"; SERVIR - DIGITE "SERVIR"
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+Rei Salaham
+100
+FINAL DO CAPÍTULO
+null
+
+CAPÍTULO
+ID CAPÍTULO
+[CONTINUAÇÃO - CAPÍTULO 1.2]
+NOME
+[CONTINUAÇÃO - CAPÍTULO 1.2]
+TEXTO
+Você decide servir o Mago do Mal. Com o tempo, você se torna corrompido e deseja matar e conquistar cada território, tornando-se um forte aliado.
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+null
+null
+FINAL DO CAPÍTULO
+[FINAL 3 - FOME DE MATANÇA]
+
+CAPÍTULO
+ID CAPÍTULO
+[CONTINUAÇÃO - CAPÍTULO 1.3]
+NOME
+[CONTINUAÇÃO - CAPÍTULO 1.3]
+TEXTO
+Você decide lutar contra o Mago do Mal. Infelizmente, ele já estava forte demais para ser combatido. Você então é derrotado.
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+Caleb
+100
+FINAL DO CAPÍTULO
+[FINAL 2 - PROTAGONISTA É DERROTADO]
+
+CAPÍTULO
+ID CAPÍTULO
+[CAPÍTULO 2 - A JORNADA]
+NOME
+[CAPÍTULO 2 - A JORNADA]
+TEXTO
+Você aceita o convite do rei e parte para recuperar o Anel do Poder. Há dois caminhos para seguir: O da direita é mais seguro, porém é mais longo. O da esquerda é o mais rápido, porém com muito inimigos. Qual caminho seguir? IR PELA DIREITA - DIGITE "DIREITA"; IR PELA ESQUERDA - DIGITE "ESQUERDA"
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+null
+null
+FINAL DO CAPÍTULO
+null
+
+CAPÍTULO
+ID CAPÍTULO
+[CAPÍTULO 2.1 - SEGUINDO PELA ESQUERDA]
+NOME
+[CAPÍTULO 2.1 - SEGUINDO PELA ESQUERDA]
+TEXTO
+Você decide seguir pelo caminho da esquerda. A viagem é curta, porém cheia de inimigos para derrotar, o que lhe custou ferimentos intensos.
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+Caleb
+40
+FINAL DO CAPÍTULO
+null
+
+CAPÍTULO
+ID CAPÍTULO
+[CAPÍTULO 2.2 - SEGUINDO PELA DIREITA]
+NOME
+[CAPÍTULO 2.2 - SEGUINDO PELA DIREITA]
+TEXTO
+Você decide seguir pelo caminho da direita. A viagem é longa, com alguns poucos inimigos para derrotar, o que lhe custou ferimentos leves.
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+Caleb
+10
+FINAL DO CAPÍTULO
+null
+
+CAPÍTULO
+ID CAPÍTULO
+[CAPÍTULO 3.1 - A CHEGADA À TORRE]
+NOME
+[CAPÍTULO 3.1 - A CHEGADA À TORRE]
+TEXTO
+Você chega até a torre. O Mago do Mal deve estar no topo da torre, porém você deve derrotar alguns inimigos que protegiam a torre. Ao derrotá-los, você chega até ao topo da torre e enfrenta o Mago do Mal em uma batalha. Porém, os ferimentos dos inimigos do caminho afetaram sua vitalidade e o deixou fraco para a batalha, o que levou à sua derrota.
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+Caleb
+60
+FINAL DO CAPÍTULO
+[FINAL 4 - GUERREIRO DESTEMIDO]
+
+CAPÍTULO
+ID CAPÍTULO
+[CAPÍTULO 3.2 - A CHEGADA À TORRE]
+NOME
+[CAPÍTULO 3.2 - A CHEGADA À TORRE]
+TEXTO
+Você chega até a torre. O Mago do Mal deve estar no topo da torre, porém você deve derrotar alguns inimigos que protegiam a torre. Ao derrotá-los, você chega até o topo da torre e enfrenta o Mago do Mal em uma batalha. Com vitalidade o suficiente, você consegue derrotar o Mago do Mal e devolver o Anel do Poder de volta para o Rei de forma segura.
+PERSONAGEM
+Caleb
+VIDA
+Caleb
+CONSEQUÊNCIA
+Caleb
+60
+FINAL DO CAPÍTULO
+[FINAL 1 - O ANEL É RECUPERADO]
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CAPÍTULO 1 - O INÍCIO]
+OPÇÃO 1
+s
+CAPÍTULO PRÓXIMO OPÇÃO 1
+[CAPÍTULO 2 - A JORNADA]
+OPÇÃO 2
+n
+CAPÍTULO PRÓXIMO OPÇÃO 2
+[CONTINUAÇÃO - CAPÍTULO 1.1]
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CONTINUAÇÃO - CAPÍTULO 1.1]
+OPÇÃO 1
+servir
+CAPÍTULO PRÓXIMO OPÇÃO 1
+[CONTINUAÇÃO - CAPÍTULO 1.2]
+OPÇÃO 2
+lutar
+CAPÍTULO PRÓXIMO OPÇÃO 2
+[CONTINUAÇÃO - CAPÍTULO 1.3]
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CONTINUAÇÃO - CAPÍTULO 1.2]
+OPÇÃO 1
+null
+CAPÍTULO PRÓXIMO OPÇÃO 1
+null
+OPÇÃO 2
+null
+CAPÍTULO PRÓXIMO OPÇÃO 2
+null
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CONTINUAÇÃO - CAPÍTULO 1.3]
+OPÇÃO 1
+null
+CAPÍTULO PRÓXIMO OPÇÃO 1
+null
+OPÇÃO 2
+null
+CAPÍTULO PRÓXIMO OPÇÃO 2
+null
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CAPÍTULO 2 - A JORNADA]
+OPÇÃO 1
+esquerda
+CAPÍTULO PRÓXIMO OPÇÃO 1
+[CAPÍTULO 2.1 - SEGUINDO PELA ESQUERDA]
+OPÇÃO 2
+direita
+CAPÍTULO PRÓXIMO OPÇÃO 2
+[CAPÍTULO 2.2 - SEGUINDO PELA DIREITA]
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CAPÍTULO 2.1 - SEGUINDO PELA ESQUERDA]
+OPÇÃO 1
+null
+CAPÍTULO PRÓXIMO OPÇÃO 1
+[CAPÍTULO 3.1 - A CHEGADA À TORRE]
+OPÇÃO 2
+null
+CAPÍTULO PRÓXIMO OPÇÃO 2
+[CAPÍTULO 3.1 - A CHEGADA À TORRE]
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CAPÍTULO 2.2 - SEGUINDO PELA DIREITA]
+OPÇÃO 1
+null
+CAPÍTULO PRÓXIMO OPÇÃO 1
+[CAPÍTULO 3.2 - A CHEGADA À TORRE]
+OPÇÃO 2
+null
+CAPÍTULO PRÓXIMO OPÇÃO 2
+[CAPÍTULO 3.2 - A CHEGADA À TORRE]
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CAPÍTULO 3.1 - A CHEGADA À TORRE]
+OPÇÃO 1
+null
+CAPÍTULO PRÓXIMO OPÇÃO 1
+null
+OPÇÃO 2
+null
+CAPÍTULO PRÓXIMO OPÇÃO 2
+null
+
+ESCOLHA
+CAPÍTULO DECISIVO
+[CAPÍTULO 3.2 - A CHEGADA À TORRE]
+OPÇÃO 1
+null
+CAPÍTULO PRÓXIMO OPÇÃO 1
+null
+OPÇÃO 2
+null
+CAPÍTULO PRÓXIMO OPÇÃO 2
+null
