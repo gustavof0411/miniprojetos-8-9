@@ -33,4 +33,12 @@ public class Personagem implements Serializable {
                 + " pontos de vida.\n";
 
     }
+
+    public String ataque(int moduloDoAtaqueataque) {
+        String resultado = "";
+        resultado = getNome() + " perde " + moduloDoAtaqueataque + " pontos de vida!\n";
+        setVida(getVida() - moduloDoAtaqueataque);
+        resultado = resultado + getNome() + " agora possui " + getVida() + " pontos de vida.";
+        return resultado;
+    }
 }

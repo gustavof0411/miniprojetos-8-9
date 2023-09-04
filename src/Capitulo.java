@@ -35,11 +35,11 @@ public class Capitulo implements Serializable {
         return this.nome;
     }
 
-    private String getTexto() {
+    public String getTexto() {
         return this.texto;
     }
 
-    private ArrayList<Escolha> getArray() {
+    public ArrayList<Escolha> getArrayEscolhas() {
         return this.arrayEscolhas;
     }
 
@@ -55,7 +55,7 @@ public class Capitulo implements Serializable {
         return this.consequencia;
     }
 
-    private String getFinalCap() {
+    public String getFinalCap() {
         return this.finalCap;
     }
 
@@ -111,13 +111,13 @@ public class Capitulo implements Serializable {
     private int escolher(Scanner continuar) {
         boolean escolhaValida = false;
         int escolhido = -1;
-        if (getArray().get(0).getTexto() != null) {
+        if (getArrayEscolhas().get(0).getTexto() != null) {
             System.out.print("Digite aqui:");
             String digitado = continuar.nextLine();
             while (!escolhaValida) {
 
-                for (int i = 0; i < getArray().size(); i++) {
-                    if (digitado.equalsIgnoreCase(getArray().get(i).getTexto())) {
+                for (int i = 0; i < getArrayEscolhas().size(); i++) {
+                    if (digitado.equalsIgnoreCase(getArrayEscolhas().get(i).getTexto())) {
                         escolhido = i;
                         escolhaValida = true;
                         break;
@@ -147,10 +147,10 @@ public class Capitulo implements Serializable {
             System.exit(0);
         } else {
             escolhido = this.escolher(continuar);
-            if (escolhido >= 0 && escolhido < getArray().size()) {
-                Capitulo proximoCapitulo = getArray().get(escolhido).getProximo();
-                if (proximoCapitulo.getArray().get(escolhido).getTexto() == null) {
-                    Capitulo escolhaAutomatica = proximoCapitulo.getArray().get(0).getProximo();
+            if (escolhido >= 0 && escolhido < getArrayEscolhas().size()) {
+                Capitulo proximoCapitulo = getArrayEscolhas().get(escolhido).getProximo();
+                if (proximoCapitulo.getArrayEscolhas().get(escolhido).getTexto() == null) {
+                    Capitulo escolhaAutomatica = proximoCapitulo.getArrayEscolhas().get(0).getProximo();
                     proximoCapitulo.executar(continuar, capitulos);
                     escolhaAutomatica.mostrar();
                     if (escolhaAutomatica.arrayEscolhas.get(0).getProximo() == null) {
@@ -205,4 +205,9 @@ public class Capitulo implements Serializable {
             this.setFinalCap(null);
         }
     }
+
+    public String alterarVidaPersonagem(int moduloDoAtaque) {
+        return getPersonagem().ataque(moduloDoAtaque);
+    }
+
 }
