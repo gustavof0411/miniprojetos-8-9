@@ -9,6 +9,7 @@ public class CapituloImagem extends Capitulo {
         String parteDaImagem = "";
         parteDaImagem = scannerDeArquivo.nextLine(); // IMAGEM
         parteDaImagem = scannerDeArquivo.nextLine();
+        this.imagem = parteDaImagem;
         while (!parteDaImagem.equals("FIM DA IMAGEM")) {
             this.imagem = imagem + "\n" + parteDaImagem;
             parteDaImagem = scannerDeArquivo.nextLine();

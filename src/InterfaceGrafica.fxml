@@ -44,7 +44,7 @@
   <children>
 <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="625.0" prefWidth="852.0">
          <children>
-            <Label fx:id="tituloCapitulo" layoutX="14.0" layoutY="7.0" prefHeight="39.0" prefWidth="747.0" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="tituloCapitulo" layoutX="14.0" layoutY="7.0" prefHeight="39.0" prefWidth="673.0" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="22.0" />
                </font>
@@ -57,9 +57,9 @@
           <Button fx:id="botaoClique" layoutX="772.0" layoutY="14.0" mnemonicParsing="false" onAction="#acaoCarregar" text="Carregar" />
             <VBox fx:id="vboxImagemCapituloImagem" layoutX="440.0" layoutY="57.0" prefHeight="403.0" prefWidth="394.0">
                <children>
-                  <Label fx:id="imagemCapituloImagem" alignment="TOP_LEFT" prefHeight="432.0" prefWidth="444.0" wrapText="true">
+                  <Label fx:id="imagemCapituloImagem" alignment="TOP_LEFT" graphicTextGap="0.0" prefHeight="432.0" prefWidth="444.0" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font size="10.0" />
+                        <Font size="8.0" />
                      </font></Label>
                </children>
             </VBox>
@@ -69,6 +69,7 @@
                </children>
             </VBox>
             <HBox fx:id="hboxAreaBotoes" layoutX="14.0" layoutY="466.0" prefHeight="140.0" prefWidth="409.0" spacing="8.0" />
+            <Button fx:id="botaoNovoJogo" layoutX="692.0" layoutY="14.0" mnemonicParsing="false" onAction="#criarNovoJogo" text="Novo Jogo" />
          </children>
 </AnchorPane>
   </children>

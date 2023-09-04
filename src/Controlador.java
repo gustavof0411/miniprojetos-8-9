@@ -1,10 +1,13 @@
 import java.util.HashMap;
+import java.util.Optional;
 import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
@@ -14,6 +17,8 @@ public class Controlador {
 
     @FXML
     private Button botaoClique;
+    @FXML
+    private Button botaoNovoJogo;
 
     @FXML
     private HBox hboxAreaBotoes;
@@ -40,7 +45,7 @@ public class Controlador {
     private VBox vboxTextoConsequencia;
 
     @FXML
-    void acaoCarregar(ActionEvent event) {
+    private void acaoCarregar(ActionEvent event) {
         Scanner continuar = new Scanner(System.in);
         HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
         HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
@@ -105,4 +110,23 @@ public class Controlador {
         }
     }
 
+    @FXML
+    private void criarNovoJogo(ActionEvent event) {
+        Alert janelaConfirmacao = new Alert(Alert.AlertType.CONFIRMATION);
+        janelaConfirmacao.setTitle("Iniciar Novo Jogo");
+        janelaConfirmacao.setHeaderText("Aviso");
+        janelaConfirmacao.setContentText("Criar um novo jogo irá deletar qualquer progresso existente."
+                + " Deseja continuar?");
+        Optional<ButtonType> resultado = janelaConfirmacao.showAndWait();
+
+        if (resultado.isPresent()) {
+            if (resultado.get() == ButtonType.OK) {
+                Scanner continuar = new Scanner(System.in);
+                HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
+                HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
+                Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
+                mostrarCapitulo(raiz);
+            }
+        }
+    }
 }
