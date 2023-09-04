@@ -180,7 +180,7 @@ Caleb
 FINAL DO CAPÍTULO
 FINAL 4 - GUERREIRO DESTEMIDO
 
-CAPÍTULO
+CAPÍTULO COM IMAGEM
 ID CAPÍTULO
 CAPÍTULO 3.2 - A CHEGADA À TORRE
 NOME
@@ -196,7 +196,36 @@ Caleb
 60
 FINAL DO CAPÍTULO
 FINAL 1 - O ANEL É RECUPERADO
-
+IMAGEM
+                        ............                        
+                       Y############Y                       
+                      ?@&!^^^^^^^^!&@?                      
+                     ~@@#PPPPPPPPPP#@@~                     
+                     :P@@G?777777?G@@P:                     
+                       J@@Y7????7Y@@J                       
+                  .!JG##&#BGPPPPGB#&##GJ!.                  
+               :?G&&GY!^..:^^^^^^:..^!YG&&G?:               
+             ^5@@P!..^?5B##########B5?^..!P@@5^             
+           :P@&J. ~5&@B5?~^:....:^~?5B@&5~ .J&@P:           
+          7&@Y. 7#@B?:                :?B@#7 .Y@&7          
+         Y@&! ^G@B!                      !B@G^ !&@Y         
+        J@&^ !&@J                          J@&! ^&@J        
+       ~@@7 ^&@?                            J@&^ 7@@~       
+       5@G  P@G                              G@P  G@5       
+      .#@J :&@7                              7@&: J@#.      
+      .#@? ^@@!                              !@@^ ?@#.      
+       B@5 .#@J                              J@#. 5@B       
+       ?@&: J@&:                            :&@J :&@?       
+       .B@P  P@B:                          :B@P  5@B.       
+        ^#@Y  5@&!                        !&@5  Y@#^        
+         ^B@P: !#@G!.                  .!G@#! :P@B^         
+          .Y@&?  7B@#5!:            :!5#@B7  ?&@5.          
+            ~P@&J: :?G&&#G5YJ??JY5G#&&G?: :J&@P~            
+              ^Y#@BJ~..^!?Y5PGGP5Y?!^..~JB@#Y^              
+                .~YB&&BPJ7~~^^^^~~7JPB&&BY~.                
+                    .~?YPGB######BGPY?~.                    
+                           ......                          
+FIM DA IMAGEM
 ESCOLHA
 CAPÍTULO DECISIVO
 CAPÍTULO 1 - O INÍCIO

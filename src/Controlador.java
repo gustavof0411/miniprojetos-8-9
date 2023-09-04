@@ -46,15 +46,23 @@ public class Controlador {
 
     @FXML
     private void acaoCarregar(ActionEvent event) {
-        Scanner continuar = new Scanner(System.in);
-        HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
-        HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
         if (ObterDadosDeArquivo.verificaSave()) {
-            Capitulo capituloSave = ObterDadosDeArquivo.desserializadorDeCapitulo("rsc/saves/capituloSave.txt");
-            mostrarCapitulo(capitulos.get(capituloSave.getNome()));
+            Scanner continuar = new Scanner(System.in);
+            HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
+            HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
+            if (ObterDadosDeArquivo.verificaSave()) {
+                Capitulo capituloSave = ObterDadosDeArquivo.desserializadorDeCapitulo("rsc/saves/capituloSave.txt");
+                mostrarCapitulo(capitulos.get(capituloSave.getNome()));
+            } else {
+                Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
+                mostrarCapitulo(raiz);
+            }
         } else {
-            Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
-            mostrarCapitulo(raiz);
+            Alert janelaAviso = new Alert(Alert.AlertType.ERROR);
+            janelaAviso.setTitle("Carregar Progresso");
+            janelaAviso.setHeaderText("Erro");
+            janelaAviso.setContentText("Não há nenhum progresso para carregar. Por favor, inicie um novo jogo.");
+            janelaAviso.show();
         }
     }
 
@@ -68,12 +76,11 @@ public class Controlador {
             CapituloImagem capituloImagem = (CapituloImagem) capitulo;
             imagemCapituloImagem.setText(capituloImagem.getImagem());
         } catch (Exception e) {
-            System.out.println("Erro no processamento da imagem do capítulo.");
         }
 
         tituloCapitulo.setText(capitulo.getNome());
         if (capitulo.getFinalCap() != null) {
-            textoCapitulo.setText(capitulo.getTexto() + "\n" + capitulo.getFinalCap());
+            textoCapitulo.setText(capitulo.getTexto() + "\n \n" + capitulo.getFinalCap());
         } else {
             textoCapitulo.setText(capitulo.getTexto() + "\n");
         }
@@ -112,20 +119,28 @@ public class Controlador {
 
     @FXML
     private void criarNovoJogo(ActionEvent event) {
-        Alert janelaConfirmacao = new Alert(Alert.AlertType.CONFIRMATION);
-        janelaConfirmacao.setTitle("Iniciar Novo Jogo");
-        janelaConfirmacao.setHeaderText("Aviso");
-        janelaConfirmacao.setContentText("Criar um novo jogo irá deletar qualquer progresso existente."
-                + " Deseja continuar?");
-        Optional<ButtonType> resultado = janelaConfirmacao.showAndWait();
+        if (!ObterDadosDeArquivo.verificaSave()) {
+            Scanner continuar = new Scanner(System.in);
+            HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
+            HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
+            Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
+            mostrarCapitulo(raiz);
+        } else {
+            Alert janelaConfirmacao = new Alert(Alert.AlertType.CONFIRMATION);
+            janelaConfirmacao.setTitle("Iniciar Novo Jogo");
+            janelaConfirmacao.setHeaderText("Aviso");
+            janelaConfirmacao.setContentText("Criar um novo jogo irá deletar qualquer progresso existente."
+                    + " Deseja continuar?");
+            Optional<ButtonType> resultado = janelaConfirmacao.showAndWait();
 
-        if (resultado.isPresent()) {
-            if (resultado.get() == ButtonType.OK) {
-                Scanner continuar = new Scanner(System.in);
-                HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
-                HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
-                Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
-                mostrarCapitulo(raiz);
+            if (resultado.isPresent()) {
+                if (resultado.get() == ButtonType.OK) {
+                    Scanner continuar = new Scanner(System.in);
+                    HashMap<String, Personagem> personagens = ObterDadosDeArquivo.carregarPersonagem();
+                    HashMap<String, Capitulo> capitulos = ObterDadosDeArquivo.carregarCapitulo(personagens, continuar);
+                    Capitulo raiz = capitulos.get("CAPÍTULO 1 - O INÍCIO");
+                    mostrarCapitulo(raiz);
+                }
             }
         }
     }
