@@ -66,7 +66,7 @@ public class Controlador {
         } else {
             textoCapitulo.setText(capitulo.getTexto() + "\n");
         }
-        textoConsequencia.setText(capitulo.alterarVidaPersonagem(40));
+        textoConsequencia.setText(capitulo.alterarVidaPersonagem(capitulo.getVidaConsequencia()));
 
         if (capitulo.getArrayEscolhas().size() != 0) {
             hboxAreaBotoes.getChildren().clear();

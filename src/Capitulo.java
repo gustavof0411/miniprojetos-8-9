@@ -8,19 +8,19 @@ public class Capitulo implements Serializable {
     private String texto;
     private Personagem personagem;
     private int vida;
-    private String consequencia;
+    private Personagem personagemConsequencia;
+    private int vidaConsequencia;
     private ArrayList<Escolha> arrayEscolhas;
     private String finalCap;
     private transient Scanner scanner;
 
-    public Capitulo(String nome, String texto, Personagem personagem, int vida, String consequencia, String finalCap,
+    public Capitulo(String nome, String texto, Personagem personagem, int vida, String finalCap,
             Scanner scanner) {
         this.nome = nome;
         this.texto = texto;
         this.arrayEscolhas = new ArrayList<Escolha>();
         this.personagem = personagem;
         this.vida = vida;
-        this.consequencia = consequencia;
         this.finalCap = finalCap;
         this.scanner = scanner;
     }
@@ -51,10 +51,6 @@ public class Capitulo implements Serializable {
         return this.vida;
     }
 
-    private String getConsequencia() {
-        return this.consequencia;
-    }
-
     public String getFinalCap() {
         return this.finalCap;
     }
@@ -63,13 +59,17 @@ public class Capitulo implements Serializable {
         return this.scanner;
     }
 
+    public Personagem getPersonagemConsequencia() {
+        return personagemConsequencia;
+    }
+
+    public int getVidaConsequencia() {
+        return vidaConsequencia;
+    }
+
     // Setters
     public void setArray(ArrayList<Escolha> escolhas) {
         this.arrayEscolhas = escolhas;
-    }
-
-    public void setConsequencia(String consequencia) {
-        this.consequencia = consequencia;
     }
 
     public void setFinalCap(String finalCap) {
@@ -98,6 +98,14 @@ public class Capitulo implements Serializable {
 
     public void setArrayEscolhas(ArrayList<Escolha> arrayEscolhas) {
         this.arrayEscolhas = arrayEscolhas;
+    }
+
+    public void setPersonagemConsequencia(Personagem personagemConsequencia) {
+        this.personagemConsequencia = personagemConsequencia;
+    }
+
+    public void setVidaConsequencia(int vidaConsequencia) {
+        this.vidaConsequencia = vidaConsequencia;
     }
 
     // Métodos
@@ -136,9 +144,11 @@ public class Capitulo implements Serializable {
     public int executar(Scanner continuar, HashMap<String, Capitulo> capitulos) {
         ObterDadosDeArquivo.serializadorDeCapitulo(capitulos.get(getNome()));
         this.mostrar();
-        if (getConsequencia() != null) {
-            System.out.println(getConsequencia());
-        }
+        /*
+         * if (getConsequencia() != null) {
+         * System.out.println(getConsequencia());
+         * }
+         */
         int escolhido;
         if (getFinalCap() != null) {
             escolhido = -1;
@@ -188,14 +198,17 @@ public class Capitulo implements Serializable {
         linhaLida = escaneadorDoArquivo.nextLine(); // PULA CONSEQUÊNCIA
         linhaLida = escaneadorDoArquivo.nextLine();
         if (!linhaLida.equalsIgnoreCase("null")) {
-            String vidaConsequencia = linhaLida;
-            vidaConsequencia = escaneadorDoArquivo.nextLine();
-            this.consequencia = personagens.get(linhaLida)
-                    .getMensagemAtk((personagens.get(linhaLida)), Integer.parseInt(vidaConsequencia));
+            this.personagemConsequencia = personagens.get(linhaLida);
             linhaLida = escaneadorDoArquivo.nextLine();
         } else {
-            this.consequencia = null;
+            this.personagemConsequencia = null;
             linhaLida = escaneadorDoArquivo.nextLine();
+        }
+        if (!linhaLida.equalsIgnoreCase("null")) {
+            this.vidaConsequencia = Integer.parseInt(linhaLida);
+            linhaLida = escaneadorDoArquivo.nextLine();
+        } else {
+            this.vidaConsequencia = Integer.parseInt(linhaLida);
             linhaLida = escaneadorDoArquivo.nextLine();
         }
         linhaLida = escaneadorDoArquivo.nextLine(); // PULA FINAL DO CAPÍTULO
@@ -207,7 +220,11 @@ public class Capitulo implements Serializable {
     }
 
     public String alterarVidaPersonagem(int moduloDoAtaque) {
-        return getPersonagem().ataque(moduloDoAtaque);
+        if (getVidaConsequencia() == 0) {
+            return null;
+        } else {
+            return getPersonagemConsequencia().ataque(moduloDoAtaque);
+        }
     }
 
 }

@@ -65,7 +65,7 @@
                   <TextArea fx:id="textoConsequencia" editable="false" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
-            <HBox fx:id="hboxAreaBotoes" layoutX="14.0" layoutY="466.0" prefHeight="140.0" prefWidth="409.0" />
+            <HBox fx:id="hboxAreaBotoes" layoutX="14.0" layoutY="466.0" prefHeight="140.0" prefWidth="409.0" spacing="8.0" />
          </children>
 </AnchorPane>
   </children>
